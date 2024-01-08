@@ -16,20 +16,21 @@ class PlacesScreen extends ConsumerWidget {
         title: const Text("Your Places"),
         actions: [
           IconButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (ctx) => const AddPlaceScreen(),
-                  ),
-                );
-              },
-              icon: const Icon(Icons.add))
+            icon: const Icon(Icons.add),
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (ctx) => const AddPlaceScreen(),
+                ),
+              );
+            },
+          )
         ],
       ),
-      body: const Padding(
-        padding: EdgeInsets.all(8.0),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
         child: PlacesList(
-          places: [],
+          places: userPlaces,
         ),
       ),
     );

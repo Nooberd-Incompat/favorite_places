@@ -8,7 +8,7 @@ class ImageInput extends StatefulWidget {
   final void Function(File image) onPickImage;
 
   @override
-  State<StatefulWidget> createState() {
+  State<ImageInput> createState() {
     return _ImageInputState();
   }
 }
@@ -61,11 +61,8 @@ class _ImageInputState extends State<ImageInput> {
       ),
       height: 250,
       width: double.infinity,
-      child: TextButton.icon(
-        icon: const Icon(Icons.camera),
-        label: const Text("Take Picture"),
-        onPressed: _takePicture,
-      ),
+      alignment: Alignment.center,
+      child: content,
     );
   }
 }
