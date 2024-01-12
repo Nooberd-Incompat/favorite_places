@@ -62,6 +62,9 @@ class _AddPlaceScreenState extends ConsumerState<AddPlaceScreen> {
             const SizedBox(
               height: 15,
             ),
+            const SizedBox(
+              height: 15,
+            ),
             ElevatedButton.icon(
               onPressed: _savePlace,
               icon: const Icon(Icons.add),
